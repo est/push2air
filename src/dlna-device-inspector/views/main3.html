@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+<script src="javascripts/jquery-1.8.2.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<style>
+.small {
+  font-size: 0.5em;
+  overflow: hidden;
+}
+.center {
+  text-align: center;
+}
+</style>
+</head>
+<body data-spy="scroll" data-target=".navbar">
+
+<div class="container">
+
+<header>
+
+<div class="row">
+<div class="span6">
+
+  <h1>DLNA Device Detector</h1>
+  <p>
+  This application detects UPnP/DLNA devices in your network.
+  </p>
+
+</div>
+
+<div class="span6">
+
+  <button class="btn btn-primary" id="refresh">Refresh</button><br>
+
+</div>
+</div>
+
+</header>
+
+<hr>
+
+<div id="main">
+  <div id="devices">
+    <div class="accordion" id="accordion">
+    </div>
+  </div>
+</div>
+
+
+<div id="inputModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 class="modalLabel">Input SOAP Message</h3>
+  </div>
+  <div class="modal-body">
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+
+
+<div id="outputModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 class="modalLabel">Output SOAP Message</h3>
+  </div>
+  <div class="modal-body">
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+
+
+<script src="javascripts/type.js"></script>
+<script src="javascripts/upnp.js"></script>
+<script src="javascripts/show.js"></script>
+<script src="javascripts/control.js"></script>
+<script src="javascripts/util.js"></script>
+<script src="javascripts/sendSoap.js"></script>
+<script src="javascripts/search.js"></script>
+<script src="javascripts/xml.js"></script>
+<script src="javascripts/server.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* * { outline: 2px solid rgba(255, 0, 0, 0.1) !important; } */
+
+.small {
+  font-size: 0.5em;
+  overflow: hidden;
+}
+.center {
+  text-align: center;
+}
+
+div#main {
+  width: 100%;
+  height: 480px;
+  overflow: auto;
+  text-overflow: ellipsis; 
+}
+
+#refresh {
+	position: relative;
+	top:	20px;
+	left:	150px; 
+}
+
+#device_desc, #services{
+	margin:0px; 
+}
+
+.device {
+	margin:0px;
+}
+
+.accordion-group{
+	margin:10px;
+	padding:0px;
+}
+
+.accordion-heading{
+	margin:0px;
+	padding:0px;
+}
+.accordion-body{
+	margin:0px;
+	padding:0px;
+}
+
+div.action{
+	margin:10px;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	padding:10px;
+	background-color:#fff;
+	border:1px solid #ccc;
+}
+
+div.action_name {
+	margin:10px;
+}
+
+.arg{
+	margin:10px
+	vertical-align:middle;
+}
+
+tr .arg {
+	vertical-align:middle;
+}
+
+td.dir {
+	width: 50px;
+	vertical-align:middle;
+}
+
+label.dir {
+	margin:0px;
+}
+
+td.arg_name {
+	width: 250px;
+	vertical-align:middle;
+}
+
+td.no_params {
+	width: 550px;
+}
+
+td.arg_input {
+	vertical-align:bottom;
+}
+
+input.arg_input {
+	margin:0px;
+	vertical-align:bottom;
+}
+
+div.send_btn, div.input_msg, div.output_msg {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+table.arg_table {
+	margin:0px;
+}
+
+td.arg_space {
+	width: 40px;
+}
+
+.modal-body {
+	text-align: center;
+}
+
+textarea{
+	width:95%;
+	height:300px;
+}

@@ -1,0 +1,21 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "/models/common/jquery-1.8.2.min.js", "/views/js/main.js" ]
+      }
+   },
+   "description": "This application can detect and controll DLNA devices.",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCLbnxMB6JIZE761xGj02kr5EQ9WM+7RbX+eJOHAph5KCjQPeFVaiDVIkWw+TB03VDnY5D/B6MB51G3uU2+lgjaISAhAONDoaEcj6PaxrfhVcBnOGaeVccZz1K0DeF1KBTBS9cXt3thGnx26QWL8b14o92KN8uWkjNx9PXHKQAnYQIDAQAB",
+   "manifest_version": 2,
+   "name": "DLNA device inspector",
+   "permissions": [ "http://*/", {
+      "socket": [ "udp-bind", "udp-send-to", "tcp-listen", "tcp-connect" ]
+   } ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.1"
+}
