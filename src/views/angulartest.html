@@ -9,6 +9,8 @@
         {text:'learn angular', done:true},
         {text:'build an angular Chrome packaged app', done:false}];
 
+      $scope.doneTodos = $scope.todos.filter(function(x){return x.done})
+
       $scope.addTodo = function() {
           $scope.todos.push({text:$scope.todoText, done:false});
           $scope.todoText = '';
@@ -37,7 +39,7 @@
 
     <h2>Todo</h2>
     <div ng-controller="TodoCtrl">
-      <span>{{remaining()}} of {{todos.length}} remaining</span>
+      <span>{{doneTodos.length}} of {{todos.length}} remaining</span>
       [ <a href="" ng-click="archive()">archive</a> ]
       <ul>
         <li ng-repeat="todo in todos">

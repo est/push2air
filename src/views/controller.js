@@ -7,15 +7,14 @@ function DeviceCtrl($scope) {
   upnp.onready = function(){
     this.listen(function(recv){
       var str = recv.data;
-      console.info('Found ' + str.length + ' bytes.')
+      console.info('Recv '+str.length+' bytes from '+recv.address+':'+recv.port+'. Code: '+recv.resultCode)
       $scope.devices.push( parseHttpResponse(str) );
     })
-    
-  }
-  upnp.start();
-
-  $scope.scan = function() {
     upnp.search('upnp:rootdevice');
   }
-
+  
+  
+  $scope.scan = function() {
+    upnp.start();
+  }
 }
