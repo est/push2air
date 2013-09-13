@@ -8,6 +8,7 @@
       $scope.todos = [
         {text:'learn angular', done:true},
         {text:'build an angular Chrome packaged app', done:false}];
+      gtds = $scope.todos
 
       $scope.doneTodos = $scope.todos.filter(function(x){return x.done})
 

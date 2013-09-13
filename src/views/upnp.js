@@ -66,6 +66,7 @@ var UpnpManager;
     }
     var self = this;
     socket.recvFrom(this.sid, function(recv){
+      console.info('recv?')
       recv.data = b2s(recv.data);
       if(typeof(callback) === 'function') {
         callback(recv);
