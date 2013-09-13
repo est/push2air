@@ -31,13 +31,13 @@ var UpnpManager;
     var self = this;
     socket.create('udp', {}, function(socketInfo){
       self.sid = socketInfo.socketId;
-      console.info(self.sid)
       socket.bind(self.sid, "0.0.0.0", 0, function(res){
         if(res!==0){
           console.info(res)
           throw('Failed to bind socket');
         }
-        self.onready;
+        console.info('ready.')
+        self.onready();
       })
     })
   };
@@ -69,6 +69,7 @@ var UpnpManager;
       if(typeof(callback) === 'function') {
         callback(recv);
       }
+      // console.info('here?', self.listen)
       self.listen(callback)
     })
   };
@@ -79,7 +80,20 @@ var UpnpManager;
 })()
 
 
-console.info(UpnpManager)
+function parseHttpResponse(data){
+  var arr = data.split("\n"), ret = {};
+  for(var i = 0, l = arr.length; i < l; i++ ) {
+    var a = arr[i].split(":");
+    var k = a[0].toLowerCase();
+    var v = a.slice(1).join(":");
+
+    if(!!v) {
+      ret[k] = v;
+    }
+  }
+  return ret;
+}
+
 var upnp = new UpnpManager();
 
 upnp.onready = function(){
