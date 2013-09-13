@@ -12,7 +12,7 @@
       [ <a href="" ng-click="scan()">Scan</a> ]
       <ul>
         <li ng-repeat="(loc, device) in devices">
-          <a href="{{loc}}"><span>{{device.server}}</span></a>
+          <a target="_blank" href="{{loc}}"><span title="{{device.server}}">{{device.addr}}</span></a>
         </li>
       </ul>
     </div>

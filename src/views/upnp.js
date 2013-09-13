@@ -27,6 +27,7 @@ var UpnpManager;
     this.sid = null;
     this.IP = "239.255.255.250";
     this.PORT = 1900;
+    this.hasRsp = false;
 
     var self = this;
     socket.create('udp', {}, function(socketInfo){
@@ -64,7 +65,7 @@ var UpnpManager;
             callback()
           }
         })
-        if (i<5){ i++ } else { clearInterval(c) }
+        if (i<5&&!self.hasRsp){ i++ } else { clearInterval(c) }
       })()
     }, 1000)
 
@@ -74,18 +75,21 @@ var UpnpManager;
       throw('Socket ID not available '+ this.sid)
     }
     var self = this;
-    socket.recvFrom(this.sid, function(recv){
-      console.info('recv?')
-      recv.data = b2s(recv.data);
-      if(typeof(callback) === 'function') {
-        callback(recv);
-      }
-      // console.info('here?', self.listen)
-      setTimeout(function(){
-        self.listen(callback)  
-      }, 1000)
-      
-    })
+    setTimeout(function(){
+      (function(){
+        socket.recvFrom(self.sid, function(recv){
+          self.hasRsp = true;
+          recv.data = b2s(recv.data);
+          if(typeof(callback) === 'function') {
+            callback(recv);
+          }
+          // console.info('here?', self.listen)
+          
+            self.listen(callback)  
+          
+        })
+      })()
+    }, 200)
   };
   UpnpManager.prototype.destroy = function() {
     socket.destroy(this.sid);

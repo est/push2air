@@ -18,14 +18,16 @@ function DeviceCtrl($scope) {
       if (recv.resultCode<=0) {
         throw('error')
       }
-      var str = recv.data;
-      console.info('Recv '+str.length+' bytes from '+recv.address+':'+recv.port+'. Code: '+recv.resultCode)
-      $scope.addDevice( parseHttpResponse(str) )
+      var pdata = parseHttpResponse(recv.data);
+      pdata['addr'] = recv.address+':'+recv.port
+      console.info('Recv '+recv.resultCode+' bytes from '+pdata.addr+',\tURL:'+pdata.location)
+      $scope.addDevice( pdata )
     })
     upnp.search('upnp:rootdevice');
   }
   
   $scope.scan = function() {
+    chrome.socket.destroy(upnp.sid||0);
     upnp.start();
   }
   // for(var i=0;i<200;i++){chrome.socket.destroy(i)}
