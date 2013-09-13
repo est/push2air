@@ -8,11 +8,11 @@
   <body>
     <h2>DLNA</h2>
     <div ng-controller="DeviceCtrl">
-      <span>{{devices.length}} devices. </span>
+      <span>{{ deviceNum() }} devices. </span>
       [ <a href="" ng-click="scan()">Scan</a> ]
       <ul>
-        <li ng-repeat="device in devices">
-          <span>{{device.server}}</span>
+        <li ng-repeat="(loc, device) in devices">
+          <a href="{{loc}}"><span>{{device.server}}</span></a>
         </li>
       </ul>
     </div>

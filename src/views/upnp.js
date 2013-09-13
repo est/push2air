@@ -50,15 +50,24 @@ var UpnpManager;
     var buffer = s2b(ssdp);
     var self=this;
     console.info('start M-SEARCH scanning... ' + self.sid)
-    socket.sendTo(this.sid, buffer, this.IP, this.PORT, function(e){
-      if(e.bytesWritten < 0) {
-        throw('M-SEARCH failed. '+ e.bytesWritten)
-      }
-      console.info('M-SEARCH sent. ' + e.bytesWritten)
-      if (typeof(callback) === 'function'){
-        callback()
-      }
-    })
+
+    // send twice
+    var i = 0
+    var c = setInterval(function(){
+      (function(){
+        socket.sendTo(self.sid, buffer, self.IP, self.PORT, function(e){
+          if(e.bytesWritten < 0) {
+            throw('M-SEARCH failed. '+ e.bytesWritten)
+          }
+          console.info('M-SEARCH sent. ' + e.bytesWritten)
+          if (typeof(callback) === 'function'){
+            callback()
+          }
+        })
+        if (i<5){ i++ } else { clearInterval(c) }
+      })()
+    }, 1000)
+
   };
   UpnpManager.prototype.listen = function(callback) {
     if(!!this.sid === false){
@@ -72,7 +81,10 @@ var UpnpManager;
         callback(recv);
       }
       // console.info('here?', self.listen)
-      self.listen(callback)
+      setTimeout(function(){
+        self.listen(callback)  
+      }, 1000)
+      
     })
   };
   UpnpManager.prototype.destroy = function() {

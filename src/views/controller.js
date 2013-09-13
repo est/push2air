@@ -2,11 +2,14 @@ var RawDevices
 
 function DeviceCtrl($scope) {
 
-  $scope.devices = []
+  $scope.devices = {}
   RawDevices = $scope.devices;
 
   $scope.addDevice = function(o) {
-    return $scope.devices.push( o );
+    return $scope.devices[ o.location ] = o;
+  }
+  $scope.deviceNum = function() {
+    return Object.keys($scope.devices).length
   }
 
   var upnp = new UpnpManager();
@@ -26,4 +29,5 @@ function DeviceCtrl($scope) {
     upnp.start();
   }
   // for(var i=0;i<200;i++){chrome.socket.destroy(i)}
+  // chrome.socket.getInfo(52, function(s){console.info(s)} ) 
 }
