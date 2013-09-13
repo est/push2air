@@ -36,7 +36,7 @@ var UpnpManager;
           console.info(res)
           throw('Failed to bind socket');
         }
-        console.info('ready.')
+        console.info('Broadcast socket Ready. ' + self.sid)
         self.onready();
       })
     })
@@ -46,7 +46,7 @@ var UpnpManager;
     if(!!this === false){
       throw('Socket is not allocated');
     }
-
+    console.info('start M-SEARCH scanning... ' + this.sid)
     var ssdp = M_SEARCH_REQUEST.replace("{{st}}", st);
     var buffer = s2b(ssdp);
 
@@ -94,13 +94,11 @@ function parseHttpResponse(data){
   return ret;
 }
 
-var upnp = new UpnpManager();
+// upnp.start();
 
-upnp.onready = function(){
-  this.listen(function(recv){
-    var str = recv.data;
-    console.info('wat', str)
-  })
-  this.search('upnp:rootdevice');
-}
-upnp.start();
+/* @ToDO:
+  1. bind button to scan
+  2. implement passive new device detection
+  3. save cached device list to local storage
+  4. hide non DMR devices
+*/

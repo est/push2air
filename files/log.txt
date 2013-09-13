@@ -1,0 +1,191 @@
+
+HTTP/1.1 200 OK
+SERVER:Cream/3.1,UPnP/1.0,UPnPNULL/1.0
+Cache-Control:max-age=3600
+LOCATION:http://10.0.0.62/devdesc.xml
+ST:upnp:rootdevice
+USN:uuid:f9e2c9c2-d670-3cb6-b3d1-b01c0a2c72f7::upnp:rootdevice
+EXT:
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=100
+DATE: Fri, 28 Jan 2000 19:54:13 GMT
+EXT:
+LOCATION: http://10.0.0.97:1900/igd.xml
+SERVER: ipos/7.0 UPnP/1.0 TL-WR841N/5.0
+ST: upnp:rootdevice
+USN: uuid:060b7353-fca6-4070-85f4-1fbfb9add62c::upnp:rootdevice
+
+
+HTTP/1.1 200 OK
+Cache-Control: max-age=300
+Date: Fri, 02 Jan 1970 00:47:25 GMT
+Ext: 
+Location: http://10.0.0.27:1780/InternetGatewayDevice.xml
+Server: POSIX UPnP/1.0 DD-WRT Linux/V24
+ST: upnp:rootdevice
+USN: uuid:8A546C0A-1A17-D1A7-AA44-7683ED2E06FF::upnp:rootdevice
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Fri, 13 Sep 2013 03:09:16 GMT
+EXT:
+LOCATION: http://10.0.0.24:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: upnp:rootdevice
+USN: uuid:8a82af25-0515-4b0c-97cf-92a5048e8374::upnp:rootdevice
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Fri, 13 Sep 2013 03:09:16 GMT
+EXT:
+LOCATION: http://10.0.0.24:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: upnp:rootdevice
+USN: uuid:8a82af25-0515-4b0c-97cf-92a5048e8374::upnp:rootdevice
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Fri, 13 Sep 2013 03:09:16 GMT
+EXT:
+LOCATION: http://10.0.0.24:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: uuid:8a82af25-0515-4b0c-97cf-92a5048e8374
+USN: uuid:8a82af25-0515-4b0c-97cf-92a5048e8374
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Fri, 13 Sep 2013 03:09:16 GMT
+EXT:
+LOCATION: http://10.0.0.24:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: uuid:8a82af25-0515-4b0c-97cf-92a5048e8374
+USN: uuid:8a82af25-0515-4b0c-97cf-92a5048e8374
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Fri, 13 Sep 2013 03:09:16 GMT
+EXT:
+LOCATION: http://10.0.0.24:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: urn:schemas-wifialliance-org:device:WFADevice:1
+USN: uuid:8a82af25-0515-4b0c-97cf-92a5048e8374::urn:schemas-wifialliance-org:device:WFADevice:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Fri, 13 Sep 2013 03:09:16 GMT
+EXT:
+LOCATION: http://10.0.0.24:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: urn:schemas-wifialliance-org:device:WFADevice:1
+USN: uuid:8a82af25-0515-4b0c-97cf-92a5048e8374::urn:schemas-wifialliance-org:device:WFADevice:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Fri, 13 Sep 2013 03:09:16 GMT
+EXT:
+LOCATION: http://10.0.0.24:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: urn:schemas-wifialliance-org:service:WFAWLANConfig:1
+USN: uuid:8a82af25-0515-4b0c-97cf-92a5048e8374::urn:schemas-wifialliance-org:service:WFAWLANConfig:1
+
+
+HTTP/1.1 200 OK
+CACHE-CONTROL: max-age=1801
+DATE: Fri, 13 Sep 2013 03:09:16 GMT
+EXT:
+LOCATION: http://10.0.0.24:49152/wps_device.xml
+SERVER: Unspecified, UPnP/1.0, Unspecified
+ST: urn:schemas-wifialliance-org:service:WFAWLANConfig:1
+USN: uuid:8a82af25-0515-4b0c-97cf-92a5048e8374::urn:schemas-wifialliance-org:service:WFAWLANConfig:1
+
+
+HTTP/1.1 200 OK
+ST:upnp:rootdevice
+USN:uuid:4b0275fa-1317-46fc-a013-b6d4a0c36e71::upnp:rootdevice
+Location:http://10.0.21.20:2869/upnphost/udhisapi.dll?content=uuid:4b0275fa-1317-46fc-a013-b6d4a0c36e71
+OPT:"http://schemas.upnp.org/upnp/1/0/"; ns=01
+01-NLS:3d7955863b31ae652f1907a185a88480
+Cache-Control:max-age=1800
+Server:Microsoft-Windows-NT/5.1 UPnP/1.0 UPnP-Device-Host/1.0
+Ext:
+
+
+HTTP/1.1 200 OK
+EXT:
+SERVER: ipOS/7.6 UPnP/1.0 Ubicom/1.0
+ST: upnp:rootdevice
+LOCATION: http://10.0.0.39/root.sxml
+CACHE-CONTROL: max-age=1800
+USN: uuid:CF62A306-73D0-3EA9-9BB2-199C6C08A264::upnp:rootdevice
+Content-Length: 0
+
+
+HTTP/1.1 200 OK
+SERVER:Cream/3.1,UPnP/1.0,UPnPNULL/1.0
+Cache-Control:max-age=3600
+LOCATION:http://10.0.0.64/devdesc.xml
+ST:upnp:rootdevice
+USN:uuid:c0cf2aba-04cb-3211-b39b-38d04afa1f02::upnp:rootdevice
+EXT:
+
+
+HTTP/1.1 200 OK
+ST:upnp:rootdevice
+USN:uuid:7cb1c4bb-4123-4d72-9fd2-cb7a8ae99c7a::upnp:rootdevice
+Location:http://10.0.26.6:2869/upnphost/udhisapi.dll?content=uuid:7cb1c4bb-4123-4d72-9fd2-cb7a8ae99c7a
+OPT:"http://schemas.upnp.org/upnp/1/0/"; ns=01
+01-NLS:9c452aa0946b85adb9cd07860c8c2afd
+Cache-Control:max-age=1800
+Server:Microsoft-Windows-NT/5.1 UPnP/1.0 UPnP-Device-Host/1.0
+Ext:
+
+
+HTTP/1.1 200 OK
+ST:upnp:rootdevice
+USN:uuid:74b74b40-a6a5-4099-b07e-c454ba91066e::upnp:rootdevice
+Location:http://10.0.4.42:2869/upnphost/udhisapi.dll?content=uuid:74b74b40-a6a5-4099-b07e-c454ba91066e
+OPT:"http://schemas.upnp.org/upnp/1/0/"; ns=01
+01-NLS:a9b26e104612a89d669d86ed9ad2f3e6
+Cache-Control:max-age=1800
+Server:Microsoft-Windows-NT/5.1 UPnP/1.0 UPnP-Device-Host/1.0
+Ext:
+
+
+HTTP/1.1 200 OK
+ST:upnp:rootdevice
+USN:uuid:46168fd1-1e89-4e8f-ae8c-7e4f80b074ec::upnp:rootdevice
+Location:http://10.0.4.49:2869/upnphost/udhisapi.dll?content=uuid:46168fd1-1e89-4e8f-ae8c-7e4f80b074ec
+OPT:"http://schemas.upnp.org/upnp/1/0/"; ns=01
+01-NLS:d04d1cc2a5af79d73931645306c9b903
+Cache-Control:max-age=1800
+Server:Microsoft-Windows-NT/5.1 UPnP/1.0 UPnP-Device-Host/1.0
+Ext:
+
+
+HTTP/1.1 200 OK
+ST:upnp:rootdevice
+USN:uuid:1acda31a-e3b3-485b-b637-ed32c18b539b::upnp:rootdevice
+Location:http://10.0.4.90:2869/upnphost/udhisapi.dll?content=uuid:1acda31a-e3b3-485b-b637-ed32c18b539b
+OPT:"http://schemas.upnp.org/upnp/1/0/"; ns=01
+01-NLS:f828a6accf8d0d3d82fefc9b83320d25
+Cache-Control:max-age=1800
+Server:Microsoft-Windows-NT/5.1 UPnP/1.0 UPnP-Device-Host/1.0
+Ext:
+
+
+HTTP/1.1 200 OK
+SERVER:Cream/3.1,UPnP/1.0,UPnPNULL/1.0
+Cache-Control:max-age=3600
+LOCATION:http://10.0.0.66/devdesc.xml
+ST:upnp:rootdevice
+USN:uuid:e486e273-58e2-3e94-a5a2-814b081fa382::upnp:rootdevice
+EXT:
