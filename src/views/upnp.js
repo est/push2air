@@ -60,7 +60,7 @@ var UpnpManager;
           if(e.bytesWritten < 0) {
             throw('M-SEARCH failed. '+ e.bytesWritten)
           }
-          console.info('M-SEARCH sent. ' + e.bytesWritten)
+          console.info('M-SEARCH sent. ' + e.bytesWritten+' bytes, retry '+i)
           if (typeof(callback) === 'function'){
             callback()
           }
