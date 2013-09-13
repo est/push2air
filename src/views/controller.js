@@ -30,4 +30,5 @@ function DeviceCtrl($scope) {
   }
   // for(var i=0;i<200;i++){chrome.socket.destroy(i)}
   // chrome.socket.getInfo(52, function(s){console.info(s)} ) 
+  // chrome.socket.recvFrom(21, function(r){console.info(r)})
 }
