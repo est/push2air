@@ -46,14 +46,15 @@ var UpnpManager;
     if(!!this === false){
       throw('Socket is not allocated');
     }
-    console.info('start M-SEARCH scanning... ' + this.sid)
     var ssdp = M_SEARCH_REQUEST.replace("{{st}}", st);
     var buffer = s2b(ssdp);
-
+    var self=this;
+    console.info('start M-SEARCH scanning... ' + self.sid)
     socket.sendTo(this.sid, buffer, this.IP, this.PORT, function(e){
       if(e.bytesWritten < 0) {
         throw('M-SEARCH failed. '+ e.bytesWritten)
       }
+      console.info('M-SEARCH sent. ' + e.bytesWritten)
       if (typeof(callback) === 'function'){
         callback()
       }
